@@ -59,8 +59,29 @@ def more_cards():
 		my_card = cards.get_cards(my_deck)
 		hand.append(my_card)
 		num +=1
-	return render_template("three_cards.html", hand = hand, title="Three card spread")
+	return render_template("multi_cards.html", hand = hand, title="Three card spread")
 
 
+# get five cards
+@app.route('/five-cards')
+def more_cards():
+	my_deck = cards.get_deck()
+	hand = []
+	num = 1
+	while num < 6:
+		my_card = cards.get_cards(my_deck)
+		hand.append(my_card)
+		num +=1
+	return render_template("multi_cards.html", hand = hand, title="Five card spread")
 
-
+# get seven cards
+@app.route('/seven-cards')
+def more_cards():
+	my_deck = cards.get_deck()
+	hand = []
+	num = 1
+	while num < 8:
+		my_card = cards.get_cards(my_deck)
+		hand.append(my_card)
+		num +=1
+	return render_template("multi_cards.html", hand = hand, title="Seven card spread")
