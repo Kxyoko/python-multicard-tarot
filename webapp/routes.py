@@ -51,7 +51,7 @@ def specific_card(card_url):
 
 # get three cards
 @app.route('/three-cards')
-def more_cards():
+def more_cards3():
 	my_deck = cards.get_deck()
 	hand = []
 	num = 1
@@ -59,12 +59,12 @@ def more_cards():
 		my_card = cards.get_cards(my_deck)
 		hand.append(my_card)
 		num +=1
-	return render_template("multi_cards.html", hand = hand, title="Three card spread")
+	return render_template("three-cards.html", hand = hand, title="Three card spread")
 
 
 # get five cards
 @app.route('/five-cards')
-def more_cards():
+def more_cards5():
 	my_deck = cards.get_deck()
 	hand = []
 	num = 1
@@ -72,11 +72,11 @@ def more_cards():
 		my_card = cards.get_cards(my_deck)
 		hand.append(my_card)
 		num +=1
-	return render_template("multi_cards.html", hand = hand, title="Five card spread")
+	return render_template("five-cards.html", hand = hand, title="Five card spread")
 
 # get seven cards
 @app.route('/seven-cards')
-def more_cards():
+def more_cards7():
 	my_deck = cards.get_deck()
 	hand = []
 	num = 1
@@ -84,4 +84,4 @@ def more_cards():
 		my_card = cards.get_cards(my_deck)
 		hand.append(my_card)
 		num +=1
-	return render_template("multi_cards.html", hand = hand, title="Seven card spread")
+	return render_template("seven-cards.html", hand = hand, title="Seven card spread")
