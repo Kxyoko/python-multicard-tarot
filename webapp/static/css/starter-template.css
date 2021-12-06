@@ -1,5 +1,9 @@
 body {
   padding-top: 20px;
+  background-image: url('/static/images/soulangel.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
 }
 .starter-template {
   padding: 40px 15px;
